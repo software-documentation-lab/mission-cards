@@ -79,6 +79,29 @@ const missions = [
     entregaveis: ["docs/adr-001.md", "Estrutura baseada em docs/adr-template.md"],
     repositorio: "https://github.com/software-documentation-lab/empresa-greenenergy",
   },
+  {
+    empresa: "empresa-changeboard",
+    setor: "SaaS B2B / Gestão de Mudanças",
+    contexto:
+      "Mudanças técnicas relevantes são discutidas de forma informal, sem RFC Interno padronizado para análise de impacto e aprovação.",
+    missao:
+      "Produzir um RFC Interno com problema, alternativas, trade-offs, proposta recomendada e plano de adoção.",
+    entregaveis: ["docs/rfc-001.md", "Estrutura baseada em docs/rfc-template.md"],
+    repositorio: "https://github.com/software-documentation-lab/empresa-changeboard",
+  },
+  {
+    empresa: "empresa-reliops",
+    setor: "SaaS de Observabilidade e Operações",
+    contexto:
+      "Incidentes críticos foram mitigados, mas sem postmortem consistente para aprendizado e prevenção de recorrência.",
+    missao:
+      "Elaborar postmortem técnico com linha do tempo, causa raiz, ações corretivas e plano de acompanhamento.",
+    entregaveis: [
+      "docs/postmortem-inc-001.md",
+      "Estrutura baseada em docs/postmortem-template.md",
+    ],
+    repositorio: "https://github.com/software-documentation-lab/empresa-reliops",
+  },
 ];
 
 const MAX_TEAMS = missions.length;
