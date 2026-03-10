@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --bg-900: #07131f;
   --bg-800: #0d1d2c;
   --surface: #10263a;
@@ -21,12 +22,14 @@ html,
 body {
   margin: 0;
   min-height: 100%;
+  background-color: var(--bg-900);
 }
 
 body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text);
   background: linear-gradient(140deg, var(--bg-900), var(--bg-800));
+  background-color: var(--bg-900);
   position: relative;
   overflow-x: hidden;
 }
