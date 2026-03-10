@@ -1,0 +1,40 @@
+<svg width="520" height="140" viewBox="0 0 520 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mc-bg" x1="14" y1="10" x2="126" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DC7B6"/>
+      <stop offset="1" stop-color="#1A7DAF"/>
+    </linearGradient>
+    <linearGradient id="mc-accent" x1="85" y1="26" x2="129" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4B15D"/>
+      <stop offset="1" stop-color="#F7D38C"/>
+    </linearGradient>
+    <filter id="mc-shadow" x="0" y="0" width="148" height="148" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="6"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.027451 0 0 0 0 0.0745098 0 0 0 0 0.121569 0 0 0 0.34 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_101_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_101_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#mc-shadow)">
+    <rect x="14" y="10" width="120" height="120" rx="24" fill="url(#mc-bg)"/>
+    <rect x="85" y="26" width="42" height="42" rx="12" fill="url(#mc-accent)"/>
+    <path d="M42 40C42 36.6863 44.6863 34 48 34H93C96.3137 34 99 36.6863 99 40V99C99 102.314 96.3137 105 93 105H48C44.6863 105 42 102.314 42 99V40Z" fill="#072237" fill-opacity="0.82"/>
+    <rect x="52" y="48" width="37" height="6" rx="3" fill="#2DC7B6"/>
+    <rect x="52" y="60" width="30" height="6" rx="3" fill="#74E0D5"/>
+    <rect x="52" y="72" width="24" height="6" rx="3" fill="#A2EDE5"/>
+    <path d="M63.16 95.18C62.38 95.18 61.64 94.87 61.09 94.32L54.96 88.19C53.83 87.06 53.83 85.23 54.96 84.1C56.09 82.97 57.92 82.97 59.05 84.1L63.16 88.21L74.97 76.4C76.1 75.27 77.93 75.27 79.06 76.4C80.19 77.53 80.19 79.36 79.06 80.49L65.23 94.32C64.68 94.87 63.94 95.18 63.16 95.18Z" fill="#F4B15D"/>
+  </g>
+
+  <g>
+    <text x="162" y="68" fill="#F2F7FB" font-family="'Space Grotesk', 'Trebuchet MS', sans-serif" font-size="46" font-weight="700" letter-spacing="0.4">
+      Mission Cards
+    </text>
+    <text x="164" y="98" fill="#BFD2E2" font-family="'IBM Plex Sans', 'Segoe UI', sans-serif" font-size="19" font-weight="500">
+      Laboratório de Documentação Técnica
+    </text>
+  </g>
+</svg>

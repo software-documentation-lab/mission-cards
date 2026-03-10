@@ -2,10 +2,18 @@
 
 Página estática com os 8 estudos de caso da disciplina, no formato de mission cards para os grupos acessarem os desafios.
 
+## Recursos
+- Visualização dos 8 mission cards com links diretos para os repositórios.
+- Seção de autor da atividade com perfil e certificações.
+- Gerador de distribuição automática de equipes (até 8 equipes), com redistribuição e cópia do resultado.
+
 ## Estrutura
-- `index.html`: estrutura da página e seções principais.
-- `styles.css`: identidade visual, layout responsivo e animações.
-- `app.js`: dados dos 8 cards e renderização dos conteúdos.
+- `index.html`: estrutura principal da página, seção de autor e grade de desafios.
+- `styles.css`: identidade visual, responsividade e animações.
+- `app.js`: dados dos 8 cards, renderização dinâmica, distribuição automática de equipes e efeitos de interação.
+- `assets/logo-mission-cards.svg`: logo oficial do projeto exibida no topo.
+- `assets/favicon.svg`: favicon vetorial da aplicação.
+- `assets/arimateia-junior.png`: foto do autor exibida na página.
 - `vercel.json`: configuração mínima para deploy estático na Vercel.
 
 ## Executar localmente

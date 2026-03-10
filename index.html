@@ -8,6 +8,7 @@
       content="Missões de consultoria em documentação técnica para disciplina de pós-graduação em DevOps."
     />
     <title>Desafio de Consultoria – Documentação Técnica</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,17 +20,27 @@
   <body>
     <div class="page-bg" aria-hidden="true"></div>
 
-    <header class="hero">
+    <header class="hero reveal" data-delay="0">
+      <div class="hero-brand">
+        <img
+          src="assets/logo-mission-cards.svg"
+          alt="Logo do projeto Mission Cards"
+          class="hero-logo"
+          width="320"
+          height="84"
+        />
+      </div>
       <p class="hero-tag">Pós-graduação em DevOps</p>
       <h1>Desafio de Consultoria – Documentação Técnica</h1>
       <p class="hero-subtitle">
         Cada grupo atuará como consultoria de engenharia para resolver um problema de documentação
         técnica em uma empresa fictícia, entregando artefatos claros, profissionais e aplicáveis.
       </p>
+      <a class="hero-cta" href="#distribuicao">Gerar distribuição das equipes</a>
     </header>
 
     <main class="content" id="conteudo-principal">
-      <section class="summary" aria-label="Resumo da atividade">
+      <section class="summary reveal" aria-label="Resumo da atividade" data-delay="100">
         <div class="summary-item">
           <span>8</span>
           <p>Estudos de caso</p>
@@ -44,14 +55,96 @@
         </div>
       </section>
 
-      <section>
+      <section class="assignment-section reveal" id="distribuicao" data-delay="120">
+        <h2 class="section-title">Distribuição Automática de Equipes</h2>
+        <p class="assignment-lead">
+          Informe os nomes das equipes (até 8) para distribuir automaticamente cada grupo em um
+          desafio.
+        </p>
+
+        <div class="assignment-layout">
+          <article class="assignment-panel tilt-card">
+            <label class="input-label" for="teams-input">Nomes das equipes (uma por linha)</label>
+            <textarea
+              id="teams-input"
+              class="teams-input"
+              placeholder="Equipe Alfa&#10;Equipe Beta&#10;Equipe Gama"
+              spellcheck="false"
+            ></textarea>
+
+            <div class="assignment-actions">
+              <button type="button" id="generate-btn" class="action-btn">Gerar distribuição</button>
+              <button type="button" id="reshuffle-btn" class="action-btn secondary" disabled>
+                Gerar novamente
+              </button>
+              <button type="button" id="copy-btn" class="action-btn ghost" disabled>
+                Copiar resultado
+              </button>
+              <button type="button" id="clear-btn" class="action-btn ghost">Limpar</button>
+            </div>
+
+            <p id="assignment-status" class="assignment-status" role="status" aria-live="polite">
+              Preencha os nomes e clique em "Gerar distribuição".
+            </p>
+          </article>
+
+          <article class="assignment-panel assignment-result-wrap">
+            <h3 class="result-title">Resultado da distribuição</h3>
+            <div id="assignment-result" class="assignment-result is-empty">
+              <p class="empty-result">
+                O resultado aparecerá aqui com equipe, desafio e link do repositório.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="author-section reveal" id="autor" data-delay="140">
+        <article class="author-card tilt-card">
+          <div class="author-photo-wrap">
+            <img
+              src="assets/arimateia-junior.png"
+              alt="Foto de Arimatéia Júnior"
+              class="author-photo"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="author-content">
+            <p class="author-tag">Autor da atividade</p>
+            <h2>Arimatéia Júnior</h2>
+            <p class="author-description">
+              Profissional com mais de 15 anos de experiência em TI, atuante em Infraestrutura de
+              TI, Cloud, DevOps, Arquitetura e Engenharia de Software.
+            </p>
+
+            <ul class="author-highlights">
+              <li>Especialista em modernização de ambientes e plataformas em nuvem</li>
+              <li>Atuação prática em engenharia, arquitetura e operações de software</li>
+              <li>Experiência em projetos de transformação digital orientados a DevOps</li>
+            </ul>
+
+            <p class="author-topic"><strong>Certificações:</strong></p>
+            <div class="cert-list" aria-label="Certificações profissionais">
+              <span class="cert-chip">Microsoft Azure</span>
+              <span class="cert-chip">Amazon Web Services (AWS)</span>
+              <span class="cert-chip">Google Cloud</span>
+              <span class="cert-chip">Oracle</span>
+              <span class="cert-chip">GitHub</span>
+              <span class="cert-chip">VMware</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="missions-section reveal" data-delay="180">
         <h2 class="section-title">Mission Cards</h2>
         <div class="missions-grid" id="missions-grid"></div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Disciplina de Documentação Técnica em DevOps</p>
+      <p>Disciplina de Documentação Técnica em DevOps · Autor: Arimatéia Júnior</p>
     </footer>
 
     <script src="app.js"></script>
