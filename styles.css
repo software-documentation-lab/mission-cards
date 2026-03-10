@@ -1,0 +1,272 @@
+:root {
+  --bg-900: #07131f;
+  --bg-800: #0d1d2c;
+  --surface: #10263a;
+  --surface-2: #15324c;
+  --line: #275173;
+  --text: #f2f7fb;
+  --muted: #bfd2e2;
+  --accent: #2dc7b6;
+  --accent-2: #f4b15d;
+  --shadow: 0 20px 35px rgba(3, 10, 17, 0.35);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(140deg, var(--bg-900), var(--bg-800));
+  position: relative;
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 5% 10%, rgba(45, 199, 182, 0.2), transparent 35%),
+    radial-gradient(circle at 95% 20%, rgba(244, 177, 93, 0.15), transparent 30%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    36px 36px,
+    36px 36px;
+  z-index: -1;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 24px;
+  animation: rise-in 0.6s ease-out both;
+}
+
+.hero-tag {
+  display: inline-flex;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 18px;
+  font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);
+  line-height: 1.1;
+  max-width: 18ch;
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+  max-width: 72ch;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 52px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 12px 0 28px;
+}
+
+.summary-item {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(191, 210, 226, 0.24);
+  background: rgba(16, 38, 58, 0.72);
+  padding: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.summary-item span {
+  display: block;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 1.55rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.summary-item p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: 1.4rem;
+}
+
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(191, 210, 226, 0.24);
+  background:
+    linear-gradient(180deg, rgba(21, 50, 76, 0.8), rgba(16, 38, 58, 0.78));
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, border-color 0.22s ease;
+  animation: rise-in 0.55s ease-out both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.mission-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(45, 199, 182, 0.6);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.company {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.sector {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d7e5f1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(244, 177, 93, 0.18);
+  border: 1px solid rgba(244, 177, 93, 0.35);
+}
+
+.card-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.topic {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #d8e7f3;
+}
+
+.topic strong {
+  color: var(--accent);
+}
+
+.deliverables {
+  margin: 0;
+  padding-left: 18px;
+  color: #e6eff7;
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: #03121d;
+  background: linear-gradient(120deg, var(--accent), #67ddd0);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(103, 221, 208, 0.85);
+}
+
+.card-link:focus-visible {
+  outline: 3px solid rgba(244, 177, 93, 0.85);
+  outline-offset: 2px;
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 26px;
+}
+
+.footer p {
+  margin: 0;
+  color: #a6bfd2;
+  font-size: 0.9rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 860px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 46px;
+  }
+}
+
+@media (max-width: 520px) {
+  .content,
+  .hero,
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .mission-card {
+    padding: 16px;
+  }
+}
